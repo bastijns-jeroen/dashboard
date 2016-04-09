@@ -1,0 +1,6 @@
+app/config.json
+**/*.js
+**/*.map
+jspm_packages
+!config.js
+.idea/
