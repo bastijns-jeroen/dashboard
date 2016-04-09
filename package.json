@@ -1,0 +1,18 @@
+{
+  "jspm": {
+    "dependencies": {
+      "FortAwesome/Font-Awesome": "github:FortAwesome/Font-Awesome@^4.5.0",
+      "TalksLab/metro-bootstrap": "github:TalksLab/metro-bootstrap@master",
+      "angular2": "npm:angular2@^2.0.0-beta.11",
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.3",
+      "text": "github:systemjs/plugin-text@^0.0.7",
+      "weathericons": "npm:weathericons@^2.0.10"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}
