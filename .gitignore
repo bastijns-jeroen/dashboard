@@ -1,4 +1,4 @@
-app/config.json
+app/myconfig.json
 **/*.js
 **/*.map
 jspm_packages

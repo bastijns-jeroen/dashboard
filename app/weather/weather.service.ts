@@ -2,17 +2,15 @@ import {Injectable}     from 'angular2/core';
 import {Http, Response} from 'angular2/http';
 import {Observable}     from 'rxjs/Observable';
 import {Weather} from "./Weather";
-import {weatherConfiguration} from "../config.json!";
+import {ConfigurationService} from "../configuration/configuration.service";
 
 const BASE_URL = 'http://api.openweathermap.org/data/2.5/forecast';
 const POLLING_INTERVAL = 1000 * 60 * 15;
 
-const WEATHER_URL = `${BASE_URL}?q=${weatherConfiguration.city}&units=metric&appid=${weatherConfiguration.apiToken}`;
-
 @Injectable()
 export class WeatherService {
     
-    constructor (private http: Http) {}
+    constructor (private http: Http, private configurationService:ConfigurationService) {}
 
     getWeather() : Observable<Array<Weather>> {
         return Observable.interval(POLLING_INTERVAL)
@@ -21,6 +19,9 @@ export class WeatherService {
     }
 
     private pollWeather() : Observable{
+        const weatherConfiguration = this.configurationService.weatherConfiguration;
+        const WEATHER_URL = `${BASE_URL}?q=${weatherConfiguration.city}&units=metric&appid=${weatherConfiguration.apiToken}`;
+
         return this.http.get(WEATHER_URL)
             .map((res:Response) => <Object[]> res.json().list)
             .flatMap((list:Array<Object>) => Observable.from(list))
