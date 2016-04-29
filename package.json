@@ -12,7 +12,19 @@
       "weathericons": "npm:weathericons@^2.0.10"
     },
     "devDependencies": {
+      "clean-css": "npm:clean-css@^3.4.12",
       "typescript": "npm:typescript@^1.6.2"
     }
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-git": "^1.7.1",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-jspm": "^0.5.8",
+    "gulp-shell": "^0.5.2",
+    "jspm": "^0.16.33",
+    "run-sequence": "^1.1.5"
   }
 }

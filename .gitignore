@@ -1,6 +1,9 @@
+dist/**/*
 app/myconfig.json
 **/*.js
 **/*.map
 jspm_packages
+node_modules
 !config.js
+!gulpfile.js
 .idea/
