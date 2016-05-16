@@ -1,4 +1,4 @@
-import {Component} from "angular2/core";
+import {Component} from "@angular/core";
 import {WeatherConfiguration} from "../weather/WeatherConfiguration";
 import {TrainConfiguration} from "../trains/TrainConfiguration";
 import {ConfigurationService} from "./configuration.service";

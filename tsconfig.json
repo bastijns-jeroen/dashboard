@@ -10,6 +10,8 @@
     "noImplicitAny": false
   },
   "exclude": [
-    "jspm_packages"
+    "jspm_packages",
+    "typings/main",
+    "typings/main.d.ts"
   ]
 }

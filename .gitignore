@@ -1,4 +1,5 @@
-dist/**/*
+dist
+typings
 **/*.js
 **/*.map
 jspm_packages
