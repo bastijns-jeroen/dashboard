@@ -16,3 +16,6 @@ Run the app by running 'live-server' from the root folder.
 When the dashboard is not configured, it will show a configuration form on startup.
 The configuration is saved to the browsers local storage.
 To clear the configuration, clear your browsers local storage.
+
+## Demo
+http://bastijns-jeroen.github.io/dashboard/

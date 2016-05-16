@@ -29,6 +29,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.20",
     "json": "github:systemjs/plugin-json@0.1.0",
     "metro-bootstrap": "github:TalksLab/metro-bootstrap@master",
+    "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "rxjs": "npm:rxjs@5.0.0-beta.6",
     "text": "github:systemjs/plugin-text@0.0.7",
     "typescript": "npm:typescript@1.8.9",

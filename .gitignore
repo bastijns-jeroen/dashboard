@@ -1,5 +1,4 @@
 dist/**/*
-app/myconfig.json
 **/*.js
 **/*.map
 jspm_packages

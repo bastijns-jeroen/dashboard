@@ -1,6 +1,4 @@
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var git = require('gulp-git');
 var shell = require('gulp-shell');
 var clean = require('gulp-clean');
 const filter = require('gulp-filter');
@@ -25,7 +23,7 @@ gulp.task('copy-sources', ['clean-distribution'], function() {
 });
 
 gulp.task('copyJSPMResources', ['clean-distribution'], function() {
-    const f = filter(['**/*.ttf', '**/*.woff', '**/*.woff2']);
+    const f = filter(['**/*.otf', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff', '**/*.woff2']);
 
     return gulp.src('jspm_packages/**/*')
         .pipe(f)
@@ -33,27 +31,3 @@ gulp.task('copyJSPMResources', ['clean-distribution'], function() {
 });
 
 gulp.task('build', ['build-distribution', 'copy-sources', 'copyJSPMResources']);
-
-gulp.task('commit-changes', function () {
-    return gulp.src('dist/**/*')
-        .pipe(git.add())
-        .pipe(git.commit('deploy new version'));
-});
-
-gulp.task('push-changes', function (cb) {
-    git.push('origin', 'gh-pages', cb);
-});
-
-gulp.task('deploy', function(callback) {
-    runSequence(
-        'commit-changes',
-        'push-changes',
-        function (error) {
-            if (error) {
-                console.log(error.message);
-            } else {
-                console.log('DEPLOY FINISHED SUCCESSFULLY');
-            }
-            callback(error);
-        });
-});
