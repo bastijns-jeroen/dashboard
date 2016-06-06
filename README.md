@@ -1,3 +1,5 @@
+[ ![Codeship Status for bastijns-jeroen/dashboard](https://codeship.com/projects/486c9870-0e0c-0134-8493-3ec668064666/status?branch=master)](https://codeship.com/projects/156250)
+
 # Dashboard
 
 This dashboard currently shows the weather and Belgian trains leaving from one station to another.
