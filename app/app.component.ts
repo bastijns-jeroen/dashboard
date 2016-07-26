@@ -3,15 +3,21 @@ import {WeatherListComponent} from "./weather/weather.list.component.ts";
 import {TrainListComponent} from "./trains/train.list.component.ts";
 import {ConfigurationComponent} from "./configuration/configuration.component";
 import {ConfigurationService} from "./configuration/configuration.service";
+import {DateInfoComponent} from "./date/date.info.component";
 
 @Component({
   selector: 'dashboard',
   template: `
     <configuration *ngIf="!isConfigured()"></configuration>
-    <weather-list *ngIf="isConfigured()"></weather-list>
-    <train-list *ngIf="isConfigured()"></train-list>
+    <div *ngIf="isConfigured()">
+      <div class="row">
+          <weather-list></weather-list>
+          <date-info></date-info>
+      </div>
+      <train-list></train-list>
+    </div>
   `,
-  directives: [WeatherListComponent, TrainListComponent, ConfigurationComponent],
+  directives: [WeatherListComponent, TrainListComponent, ConfigurationComponent, DateInfoComponent],
   providers: [ConfigurationService]
 })
 export class AppComponent {

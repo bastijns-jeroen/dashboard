@@ -7,10 +7,8 @@ import {WeatherComponent} from "./weather.component";
 @Component({
     selector: 'weather-list',
     template: `
-        <div class="row">
-            <div *ngFor="let weather of weatherInfo | async" class="col-sm-6 col-md-2">
-                <weather [weather]="weather"></weather>
-            </div>
+        <div *ngFor="let weather of weatherInfo | async" class="col-sm-6 col-md-2">
+            <weather [weather]="weather"></weather>
         </div>
     `,
     providers: [WeatherService],

@@ -4,6 +4,8 @@ var clean = require('gulp-clean');
 const filter = require('gulp-filter');
 var htmlreplace = require('gulp-html-replace');
 
+// Building
+
 gulp.task('clean-distribution', function () {
     return gulp.src('dist/', {read: false})
         .pipe(clean());

@@ -1,9 +1,17 @@
-dist
-typings
-**/*.js
-**/*.map
+# Editors
+.idea/
+
+# Dependencies
 jspm_packages
 node_modules
-!config.js
-!gulpfile.js
-.idea/
+
+# Distribution
+dist/
+
+# Compiled output
+built/
+
+# Typescript typings
+typings/
+
+.DS_Store
