@@ -29,5 +29,8 @@
     "gulp-html-replace": "^1.5.5",
     "gulp-shell": "^0.5.2",
     "jspm": "^0.16.33"
+  },
+  "scripts": {
+    "deploy": "./deploy-ghpages.sh"
   }
 }

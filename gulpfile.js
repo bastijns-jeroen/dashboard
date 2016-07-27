@@ -33,3 +33,5 @@ gulp.task('copyJSPMResources', ['clean-distribution'], function() {
 });
 
 gulp.task('build', ['build-distribution', 'copy-sources', 'copyJSPMResources']);
+
+gulp.task('default', ['build']);
