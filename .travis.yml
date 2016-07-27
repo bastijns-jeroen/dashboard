@@ -1,8 +1,8 @@
 language: node_js
 node_js:
   - node
-after_install: jspm config registries.github.auth ${GH_TOKEN}
 script:
+  - jspm config registries.github.auth ${GH_TOKEN}
   - jspm install
   - gulp
   - npm run deploy
