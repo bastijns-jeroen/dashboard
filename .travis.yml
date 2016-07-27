@@ -1,8 +1,9 @@
 language: node_js
 node_js:
-- node
-script: gulp
-deploy: npm run deploy
+  - node
+script:
+  - gulp
+  - npm run deploy
 env:
   global:
   - GH_REF=github.com/bastijns-jeroen/dashboard.git
