@@ -31,6 +31,6 @@
     "jspm": "^0.16.33"
   },
   "scripts": {
-    "deploy": "./deploy-ghpages.sh"
+    "deploy": "./scripts/deploy-ghpages.sh"
   }
 }
