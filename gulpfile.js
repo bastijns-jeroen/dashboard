@@ -16,12 +16,8 @@ gulp.task('build-distribution', ['clean-distribution'], shell.task('jspm bundle-
 gulp.task('copy-sources', ['clean-distribution'], function() {
     return gulp.src('index.html')
         .pipe(htmlreplace({
-            'basetag': '<base href="/dashboard">'
-        }))
-        .pipe(htmlreplace({
-            'production': '<script src="build.js"></script>'
-        }))
-        .pipe(htmlreplace({
+            'production': '<script src="build.js"></script>',
+            'basetag': '<base href="/dashboard">',
             'development': ''
         }))
         .pipe(gulp.dest('dist/'));
