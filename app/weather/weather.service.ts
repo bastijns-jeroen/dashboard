@@ -16,6 +16,10 @@ export class WeatherService {
         return Observable.interval(POLLING_INTERVAL)
             .startWith('run right away')
             .switchMap(() => this.pollWeather())
+            .retryWhen(function(errors) {
+                //If errors, delay with 200ms and try again
+                return errors.delay(200);
+            });
     }
 
     private pollWeather() : Observable{
@@ -34,7 +38,7 @@ export class WeatherService {
     private handleError (error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
-        console.error(error);
-        return Observable.throw(error.json().error || 'Server error');
+        console.error(error.toJSON());
+        return Observable.throw(error.toJSON() || 'Server error');
     }
 }
